@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C0F4F43-1AB2-453F-8FC9-8F1F59AC648B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyecto_bases</RootNamespace>
+    <AssemblyName>proyecto bases</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>HospitalUD.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hospital.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Dempleados.cs" />
+    <Compile Include="Datos\Conexion_BD.cs" />
+    <Compile Include="Datos\DMedicos.cs" />
+    <Compile Include="Datos\DPacientes.cs" />
+    <Compile Include="Logica\Diagnostico.cs" />
+    <Compile Include="Logica\Empleado.cs" />
+    <Compile Include="Logica\Exempleado.cs" />
+    <Compile Include="Logica\Medico.cs" />
+    <Compile Include="Logica\Paciente.cs" />
+    <Compile Include="Logica\Sustituciones.cs" />
+    <Compile Include="Logica\Vacacion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\agregarDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\agregarDiagnostico.Designer.cs">
+      <DependentUpon>agregarDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\diagnosticoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\diagnosticoPaciente.Designer.cs">
+      <DependentUpon>diagnosticoPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\disponibilidadMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\disponibilidadMedicos.Designer.cs">
+      <DependentUpon>disponibilidadMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\exempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\exempleados.Designer.cs">
+      <DependentUpon>exempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\empleados.Designer.cs">
+      <DependentUpon>empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\listadoPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\listadoPacientes.Designer.cs">
+      <DependentUpon>listadoPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\medicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\medicos.Designer.cs">
+      <DependentUpon>medicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\pacientes.Designer.cs">
+      <DependentUpon>pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\agregarSustitucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\agregarSustitucion.Designer.cs">
+      <DependentUpon>agregarSustitucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\asignarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\asignarHorario.Designer.cs">
+      <DependentUpon>asignarHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\sustitucionesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\sustitucionesEmpleados.Designer.cs">
+      <DependentUpon>sustitucionesEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\agregarVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\agregarVacaciones.Designer.cs">
+      <DependentUpon>agregarVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\vacacionesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\vacacionesEmpleados.Designer.cs">
+      <DependentUpon>vacacionesEmpleados.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\agregarDiagnostico.resx">
+      <DependentUpon>agregarDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\diagnosticoPaciente.resx">
+      <DependentUpon>diagnosticoPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\disponibilidadMedicos.resx">
+      <DependentUpon>disponibilidadMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\exempleados.resx">
+      <DependentUpon>exempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\empleados.resx">
+      <DependentUpon>empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\listadoPacientes.resx">
+      <DependentUpon>listadoPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\medicos.resx">
+      <DependentUpon>medicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\pacientes.resx">
+      <DependentUpon>pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\agregarSustitucion.resx">
+      <DependentUpon>agregarSustitucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\asignarHorario.resx">
+      <DependentUpon>asignarHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\sustitucionesEmpleados.resx">
+      <DependentUpon>sustitucionesEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\agregarVacaciones.resx">
+      <DependentUpon>agregarVacaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\vacacionesEmpleados.resx">
+      <DependentUpon>vacacionesEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HospitalUD.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="baseDatos\hospital.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="baseDatos\hospital_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>hospital.mdf</DependentUpon>
+    </Content>
+    <Content Include="hospital.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
